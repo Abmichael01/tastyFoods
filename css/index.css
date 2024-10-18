@@ -1,0 +1,390 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 0px; */
+    background-color: white;
+    height: 60px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    
+}
+
+nav h2{
+    color: #E4491F;
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav a{
+    color: rgb(56, 56, 56);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+}
+
+.scroll-to-top{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #c7401b;
+    background-color: white;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 10;
+    box-shadow: 0px 0px 10px #9f9f9f;
+    cursor: pointer;
+    transition: all .5s;
+    line-height: 50px;
+}
+
+.scroll-to-top:active{
+    transform: scale(0.9);
+}
+
+.home{
+    background-image: url(/images/pic1.jpg);
+    background-size: cover;
+    height: calc(100vh - 60px);
+    position: relative;
+}
+
+.home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, 0.8); 
+}
+
+
+
+.home .main{
+    padding: 0px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    z-index: 2000;
+    position: relative;
+}
+
+.img-cont{
+    height: 90%;
+    width: 570px;
+    position: relative;
+}
+
+.home .main img{
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    position: relative;
+    z-index: 1000;
+    
+}
+
+.img-cont::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 10%;
+    top: 20%;
+    border-radius: 50%;
+    background-color: #E4491F;
+}
+
+.home .content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home h2{
+    font-size: 50px;
+    color: white;
+}
+
+.home h3{
+    font-size: 25px;
+    color: rgb(180, 180, 180);
+    
+}
+
+.home .content div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menus{
+    padding: 10px 30px;
+    background: #E4491F;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all .1s;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.menus:hover{
+    background: #c7401b;
+}
+
+.tables{
+    padding: 10px 30px;
+    background: rgb(66, 66, 66);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all .1s;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.tables:hover{
+    background: rgb(49, 49, 49);
+}
+
+
+.about{
+    height: 100vh;
+    background-image: url(/images/pic2.jpg);
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, 0.8); 
+}
+
+.about button{
+    height: 60px;
+    width: 60px;
+    color: black;
+    background-color: white;
+    border: none;
+    clip-path: circle();
+    font-size: 30px;
+    position: absolute;
+    top: calc(50% - 30px);
+    z-index: 2;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.about .previous{
+    left: 50px;
+}
+
+.about .next{
+    right: 50px;
+}
+
+.about button:hover{
+    background-color: rgb(209, 209, 209);
+}
+
+.about .main{
+    height: 80vh;
+    width: 70%;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.about .current{
+    display: flex;
+    gap: 30px;
+}
+
+
+.current-div{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    transition: all 1s;
+    
+}
+
+.curr{
+    width: 40px;
+    background-color: #c7401b;
+}
+
+.about-cont{
+    height: 100%;
+    transition: all 1s;
+}
+
+.about .main .sub-main{
+    display: flex;
+    flex: 1fr 1fr;
+    height: 100%;
+}
+
+.about .main .sub-main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 20px;
+    width: 50%;
+    
+}
+
+.about .main .sub-main h1{
+    font-size: 40px;
+    color: #c7401b;
+    text-align: center;
+}
+
+.about .main .sub-main p{
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.about .main .sub-main img{
+    width: 50% ;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hide{
+    display: none;
+}
+
+.fade-in{
+    animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.menus-sec{
+    height: 100vh;
+    background-image: url(/images/pic5.jpg);
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menus-sec::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, 0.8); 
+}
+
+.menus-sec h3{
+    font-size: 50px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.menus-sec p{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+
+
+.tables-sec{
+    height: 100vh;
+    background-image: url(/images/pic8.jpg);
+    position: relative;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tables-sec::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba( 0, 0, 0, 0.8); 
+}
+
+.tables-sec h3{
+    font-size: 50px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.tables-sec p{
+    font-size: 30px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
